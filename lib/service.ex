@@ -24,7 +24,11 @@ defmodule BlinkyPresence.Service do
   ## Server API
 
   def start_link(opts) do
-    opts = Keyword.merge([name: __MODULE__, log_level: false], opts)
+    opts = Keyword.merge([
+      name: __MODULE__,
+      heartbeat_interval: 500,
+      log_level: false
+    ], opts)
     GenServer.start_link(Phoenix.Tracker, [__MODULE__, opts, opts], name: __MODULE__)
   end
 
