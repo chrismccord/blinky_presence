@@ -1,0 +1,1 @@
+%{"phoenix_pubsub": {:git, "https://github.com/phoenixframework/phoenix_pubsub.git", "e9cd1accfb7581c6bf034fb3aa5d8f68c3c7d82f", []}}
