@@ -17,6 +17,10 @@ defmodule BlinkyPresence.Service do
     Phoenix.Tracker.update(__MODULE__, pid, @topic, service_type, meta)
   end
 
+  def list() do
+    __MODULE__
+    |> Phoenix.Tracker.list(@topic)
+  end
   def list(service_type) do
     __MODULE__
     |> Phoenix.Tracker.list(@topic)
